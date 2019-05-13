@@ -86,7 +86,7 @@ def main():
         'git+https://github.com/jupyterhub/the-littlest-jupyterhub.git'
     )
 
-    subprocess.check_output('pip3 install' + pip_flags + [tljh_repo_path], stderr=subprocess.STDOUT)
+    subprocess.check_output('pip3 install' + pip_flags + tljh_repo_path, stderr=subprocess.STDOUT)
     logger.info('Setup tljh package')
 
     logger.info('Starting TLJH installer...')
