@@ -85,7 +85,7 @@ def main():
         'TLJH_BOOTSTRAP_PIP_SPEC',
         'git+https://github.com/jupyterhub/the-littlest-jupyterhub.git'
     )
-    subprocess.check_output(["pip3", "install", pip_flags[0], tljh_repo_path], stderr=subprocess.STDOUT)
+    subprocess.check_output(["python3", "-m", "pip", "install", pip_flags[0], tljh_repo_path], stderr=subprocess.STDOUT)
     logger.info('Setup tljh package')
 
     logger.info('Starting TLJH installer...')
